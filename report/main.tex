@@ -260,9 +260,11 @@ T+A (greedy) & raw & 7\% & 1S & 12.66 & 12.60 & 2.10 & 2.11 & 12.25 & 12.21 & 9.
 RNN (greedy) & bpe & 0\% & 1S & 29.90 & 29.71 & 15.21 & 15.15 & 28.22 & 28.04 & 24.44 \\
 T (greedy) & lem & 2\% & 1S & 37.56 & 32.40 & 10.05 & 8.50 & 31.55 & 27.10 & 26.39 \\
 RNN (greedy) & raw & 7\% & 1S & 34.67 & 34.66 & 15.65 & 15.70 & 32.38 & 32.38 & 27.57 \\
+T+A (greedy) & lem & 2\% & 1S & 40.04 & 39.31 & 14.53 & 14.27 &
+35.83 & 35.18 & 30.13 \\
 RNN (greedy) & lem & 2\% & 1S & 38.42 & 37.82 & 16.62 & 16.41 & 35.67 & 35.12 & 30.24 \\
-T+A (greedy) & lem & 2\% & 1S & 41.17 & 40.47 & 15.40 & 15.15 &
-36.80 & 36.19 & 31.12 \\
+T+A (beam 2-2-8) & lem & 2\% & 1S & 40.75 & 40.54 & 15.45 & 15.35 &
+36.48 & 36.30 & 30.89 \\
 RNN (beam 10-10-3) & lem  & 2\% &  1S & 39.60 & 39.14 & 17.97 & 17.78 & 36.84 & 36.42 & 31.47 \\
 RNN (beam 2-2-8) & lem  & 2\% &  1S & 40.19 & 40.39 & 18.29 & 18.37 & 37.37 & 37.57 & 31.95\\
 RNN (beam 10-2-10) & lem & 2\% & 1S & 40.17 & 40.58 & 18.49 & 18.66 & 37.34 & 37.72 & 32.00 \\
@@ -281,7 +283,7 @@ copynet-bpe-43m \cite{gusev2019importance} & bpe & 0\% & 800T & 41.61 & 40.33 & 
 \end{center}
 \end{table}
 
-Our models have worse score compared with related works. Also we got very low scores for Transformer with raw text normalization (Why?). Beam search raises scores on 1-2 points. We noticed that depth of the beam is more important than its width. We do not provide beam search results for Transformer because we didn't calculate them enough (100k samples). But on 1k samples it also gives  1-2 points to scores.
+Our models have worse score compared with related works. Also we got very low scores for Transformer with raw text normalization (Why?). Beam search raises scores on 1-2 points. We noticed that depth of the beam is more important than its width.
 
 \begin{table}[H]
 \begin{center}
